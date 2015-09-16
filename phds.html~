@@ -5,7 +5,7 @@
 <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" hreflang="en"/>
 <link rel="schema.DCTYPE" href="http://purl.org/dc/dcmitype/" hreflang="en"/>
 <link rel="schema.DCAM" href="http://purl.org/dc/dcam/" hreflang="en"/>
-<link rel="stylesheet" type="text/css" href="resources/css/sheets.css">
+<!--link rel="stylesheet" type="text/css" href="resources/css/sheets.css"-->
 <script src="resources/js/sorttable.js"></script>
 </head>
 <body dir="ltr" style="max-width:21.001cm;margin-top:2cm; margin-bottom:2cm; margin-left:2cm; margin-right:2cm; writing-mode:lr-tb; ">

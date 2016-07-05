@@ -1,5 +1,106 @@
-<form action="myprocessingscript.php" method="POST">
-    <input name="field1" type="text" />
-    <input name="field2" type="text" />
-    <input type="submit" name="submit" value="Save Data">
+
+<!-- saved from url=(0064)file:///home/cervere/sandbox/site/cervere.github.io/addconf.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style type="text/css">
+   table {border-collapse:collapse; table-layout:fixed; width:1550px;}
+   table td {border:solid 1px #fab; width:100px; word-wrap:break-word;}
+</style>
+<link rel="stylesheet" type="text/css" href="./addconf_files/sheets.css">
+<script src="./addconf_files/jquery.min.js"></script>
+<script src="./addconf_files/sorttable.js"></script>
+<script language="Javascript" type="text/javascript">
+$(document).ready(function(){
+    if(new RegExp('[\?&]view=([^&#]*)').exec(window.location.href)){
+        $('form').each(function(){
+                    $(this).show();
+        });
+    } else {
+        $('form').each(function(){
+                    $(this).hide();
+        });
+    }
+});
+function addInput(divName){
+      var inps = document.forms.conf.getElementsByClassName("add");
+      var str = ''
+      for(var i = 0; i < inps.length; i++){
+         if(i == 3){
+             str += '<td> <a href="' + inps[i].value+ '">' + inps[i].value + '</a></td>' 
+         } else {
+             str += '<td>' + inps[i].value+ '</td>' 
+         }
+      }
+      var newdiv = document.createElement('tr');
+      newdiv.innerHTML = str;
+      document.getElementById(divName).appendChild(newdiv);
+}
+function links(divName){
+      var table = document.getElementById(divName);
+      var inps = table.getElementsByTagName("tr");
+      var str = ''
+      for(var i = 0; i < inps.length; i++){
+         cols = inps[i].getElementsByTagName("td");
+         for (var j=0; j < cols.length; j++){
+             if(j == 2){
+                 link = cols[j].innerHTML
+                 cols[j].innerHTML =  '<td> <a href="' + link + '">' + link + '</a></td>'
+             }
+         }
+      }
+}
+function link(){
+$(document).ready(function(){
+    $('#confs tr').each(function(){
+        if($(this).find('td')){
+            var txt = $(this).find('td').eq(3).text()
+            $(this).find('td').eq(3).html('<a href="'+txt+'">'+txt+'</a>');
+        }
+    });
+});
+}
+</script>
+</head>
+<body>
+<form style="display:block" name="conf" action="file:///home/cervere/sandbox/site/cervere.github.io/addconf.html" method="POST">
+    <table>
+	<tbody>
+        <tr> 
+            <td><a>Name</a></td> 
+            <td><a>Location</a></td> 
+            <td><a>Date (yyyy-mm-dd)</a></td> 
+            <td><a>Website</a></td> 
+            <td><a>Keywords</a></td> 
+        </tr>
+    <tr>
+    <td><input class="add" name="name" type="text" size="50"> </td>
+    <td><input class="add" name="location" type="text" size="50"> </td>
+    <td><input class="add" name="date" type="text"> </td>
+    <td><input class="add" name="website" type="text" size="75"> </td>
+    <td><input class="add" name="keywords" type="text" size="75"> </td>
+    </tr>
+    <tr><td></td><td></td><td>
+    <input class="but" type="button" name="submit" onclick="addInput(&#39;confs&#39;);" value="Save Data"><br>
+    </td> <td> </td><td> </td></tr>
+    </tbody></table>
+    <br><br>
+    <input class="but" type="button" name="reset" onclick="document.getElementById(&#39;confs&#39;).innerHTML = &#39;&#39;;" value="Reset">
+    <br><br>
 </form>
+<form>
+    <input class="but" type="button" name="lnks" onclick="link();" value="Links">
+    <br><br>
+</form>
+<table class="sortable" id="confs" border="1"><thead><tr> 
+            <td><a>Name</a></td> 
+            <td><a>Location</a></td> 
+            <td><a>Date (yyyy-mm-dd)</a></td> 
+            <td><a href="file:///home/cervere/sandbox/site/cervere.github.io/Website">Website</a></td> 
+            <td><a>Keywords</a></td> 
+        </tr></thead>
+        <tbody>
+<tr>
+<td>ACM Symposium on Applied Computing</td><td>Marrakech, Morocco</td><td>2016-09-15</td><td><a href="http://www.acm.org/conferences/sac/sac2017/">http://www.acm.org/conferences/sac/sac2017/</a></td><td>Internet of Things (IoT), Smart Cities, Urban Computing, sensor networks etc.</td></tr><tr><td>Society of Applied Neuroscience (SAN)</td><td>Corfu, Greece</td><td>2016-07-10</td><td><a href="http://applied-neuroscience.org/san2016/">http://applied-neuroscience.org/san2016/</a></td><td>Department of Neurology of the Max Planck Institute for Human Cognitive and Brain Sciences</td></tr><tr><td>Bernstein Conference 2016</td><td>Berlin, Germany</td><td>2016-08-01</td><td><a href="http://www.nncn.de/en/bernstein-conference/2016/abstracts">http://www.nncn.de/en/bernstein-conference/2016/abstracts</a></td><td>Computational Neuroscience</td></tr><tr><td>Bernstein Conference 2016 (Poster)</td><td>Berlin, Germany</td><td>2016-08-01</td><td><a href="http://www.nncn.de/en/bernstein-conference/2016/abstracts">http://www.nncn.de/en/bernstein-conference/2016/abstracts</a></td><td>Computational Neuroscience</td></tr><tr><td> International Conference on Brain Informatics &amp; Health (BIH'16) (Abstract)</td><td>Hilton Omaha, USA</td><td>2016-07-17</td><td><a href="http://wibih.unomaha.edu/bih">http://wibih.unomaha.edu/bih</a></td><td>neuroscience, cognitive science, computer science, data science, artificial intelligence, information communication technologies, and neuroimaging technologies with the purpose of exploring the fundamental roles, interactions as well as practical impacts of Brain Informatics</td></tr><tr><td>Autonomous Robots Journal Special Issue</td><td>Journal</td><td>2016-10-01</td><td><a href="http://static.springer.com/sgw/documents/1572468/application/pdf/AURO+CFP+-+Human-Robot+Collaboration.pdf">http://static.springer.com/sgw/documents/1572468/application/pdf/AURO+CFP+-+Human-Robot+Collaboration.pdf</a></td><td>* Learning from demonstration * Reinforcement learning * Active learning etc</td></tr><tr><td>International Conference on Brain Inspired Cognitive Systems (BICS 2016)</td><td>Beijing</td><td>2016-07-15</td><td><a href="http://bii.ia.ac.cn/bics-2016/index.html">http://bii.ia.ac.cn/bics-2016/index.html</a></td><td>Biologically Inspired Systems, Cognitive Neuroscience, Models of Consciousness, Neural Computation</td></tr><tr><td> 1st HBP Student Conference </td><td>Vienna, Austria</td><td>2016-10-07</td><td><a href="https://education.humanbrainproject.eu/web/studentconference">https://education.humanbrainproject.eu/web/studentconference</a></td><td>Transdisciplinary Research Linking Neuroscience, Brain Medicine and Computer Science</td></tr><tr><td> IROS 2016 Workshop on Human-Robot Collaboration</td><td>Daejeon, Korea</td><td>2016-08-01</td><td><a href="http://www.ausy.tu-darmstadt.de/Workshops/IROS2016">http://www.ausy.tu-darmstadt.de/Workshops/IROS2016</a></td><td>Learning and modelling human-robot interaction, Intention recognition, skill level/gap evaluation, Co-adaptation between human and robo</td></tr><tr><td>ANNUAL CONFERENCE OF THE ASSOCIATION FOR COGNITIVE SCIENCE (ACCS)</td><td>IIT GANDHINAGAR</td><td>2016-07-31</td><td><a href="http://www.iitgn.ac.in/accs2016/index.html">http://www.iitgn.ac.in/accs2016/index.html</a></td><td>Cognitive Science</td></tr><tr><td>International Joint Conference on Neural Networks (IJCNN)</td><td>Alaska, USA</td><td>2016-11-15</td><td><a href="http://www.ijcnn.org/call-for-papers">http://www.ijcnn.org/call-for-papers</a></td><td>COMPUTATIONAL NEUROSCIENCE,NEURAL MODELS OF PERCEPTION, COGNITION AND ACTION, BIO-INSPIRED AND BIOMORPHIC SYSTEMS</td></tr></tbody><tfoot></tfoot></table>
+
+
+
+</body></html>

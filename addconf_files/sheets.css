@@ -1,0 +1,73 @@
+<style type="text/css">
+	@page {  }
+
+/* Sortable tables */
+table.sortable thead {
+    background-color:#eee;
+    color:#666666;
+    font-weight: bold;
+    cursor: default;
+}
+	table { border-collapse:collapse; border-spacing:5; empty-cells:hide}
+	td, th { vertical-align:top; font-size:10pt;}
+	h1, h2, h3, h4, h5, h6 { clear:both }
+	ol, ul { margin:0; padding:0;}
+	li { list-style: none; margin:0; padding:0;}
+	<!-- "li span.odfLiEnd" - IE 7 issue-->
+	li span. { clear: both; line-height:0; width:0; height:0; margin:0; padding:0; }
+	span.footnodeNumber { padding-right:1em; }
+	span.annotation_style_by_filter { font-size:95%; font-family:Arial; background-color:#fff000;  margin:0; border:0; padding:0;  }
+	* { margin:0;}
+	.ta1 { writing-mode:lr-tb; }
+	.ta2 { writing-mode:lr-tb; }
+	.Default { font-family:Arial; vertical-align:bottom; }
+	.ce1 { font-family:Arial; vertical-align:bottom; text-align:center ! important; margin-left:0cm; writing-mode:page; font-size:10pt; font-style:normal; text-shadow:none; text-decoration:none ! important; font-weight:bold; }
+	.ce10 { font-family:Arial; vertical-align:bottom; margin-left:0cm; writing-mode:page; font-size:10pt; font-style:normal; text-shadow:none; text-decoration:none ! important; font-weight:normal; }
+	.ce11 { font-family:Arial; vertical-align:bottom; text-align:left ! important; margin-left:0cm; writing-mode:page; font-size:10pt; font-style:normal; text-shadow:none; text-decoration:none ! important; font-weight:normal; }
+	.ce12 { font-family:arial, helvetica, sans-serif; vertical-align:bottom; margin-left:0cm; writing-mode:page; font-size:10pt; font-style:normal; text-shadow:none; text-decoration:none ! important; font-weight:bold; }
+	.ce13 { font-family:arial, helvetica, sans-serif; vertical-align:bottom; margin-left:0cm; writing-mode:page; color:#0000ff; font-size:10pt; font-style:normal; text-shadow:none; text-decoration:none ! important; font-weight:bold; }
+	.ce14 { font-family:Times New Roman; vertical-align:bottom; margin-left:0cm; writing-mode:page; font-size:10pt; font-style:normal; text-shadow:none; text-decoration:none ! important; font-weight:normal; }
+	.ce15 { font-family:arial, helvetica, sans-serif; vertical-align:bottom; margin-left:0cm; writing-mode:page; font-size:10pt; font-style:normal; text-shadow:none; text-decoration:none ! important; font-weight:bold; }
+	.ce16 { font-family:Arial; vertical-align:bottom; margin-left:0cm; writing-mode:page; }
+	.ce2 { font-family:Arial; vertical-align:bottom; }
+	.ce3 { font-family:arial, helvetica, sans-serif; vertical-align:bottom; margin-left:0cm; writing-mode:page; font-size:10pt; font-style:normal; text-shadow:none; text-decoration:none ! important; font-weight:normal; }
+	.ce4 { font-family:Times New Roman; vertical-align:bottom; margin-left:0cm; writing-mode:page; font-size:10pt; font-style:normal; text-shadow:none; text-decoration:none ! important; font-weight:normal; }
+	.ce5 { font-family:Times New Roman; vertical-align:bottom; margin-left:0cm; writing-mode:page; font-size:12pt; font-style:normal; text-shadow:none; text-decoration:none ! important; font-weight:normal; }
+	.ce6 { font-family:Times New Roman; vertical-align:bottom; margin-left:0cm; writing-mode:page; font-size:10pt; font-style:normal; text-shadow:none; text-decoration:none ! important; font-weight:bold; }
+	.ce7 { font-family:Arial; vertical-align:bottom; font-size:10pt; font-style:normal; text-shadow:none; text-decoration:none ! important; font-weight:normal; }
+	.ce8 { font-family:Times New Roman; vertical-align:bottom; margin-left:0cm; writing-mode:page; color:#0000ff; font-size:10pt; font-style:normal; text-shadow:none; text-decoration:none ! important; font-weight:normal; }
+	.ce9 { font-family:Arial; vertical-align:bottom; color:#0000ff; font-size:10pt; font-style:normal; text-shadow:none; text-decoration:none ! important; font-weight:normal; }
+	.co1 { width:3.985cm; }
+	.co10 { width:4.12cm; }
+	.co11 { width:34.819cm; }
+	.co2 { width:2.258cm; }
+	.co3 { width:3.304cm; }
+	.co4 { width:8.451cm; }
+	.co5 { width:37.671cm; }
+	.co6 { width:4.882cm; }
+	.co7 { width:10.356cm; }
+	.co8 { width:26.224cm; }
+	.co9 { width:3.194cm; }
+	.ro1 { height:0.452cm; }
+	.ro10 { height:4.791cm; }
+	.ro11 { height:0.841cm; }
+	.ro12 { height:1.632cm; }
+	.ro13 { height:1.249cm; }
+	.ro14 { height:2.533cm; }
+	.ro2 { height:3.605cm; }
+	.ro3 { height:4.396cm; }
+	.ro4 { height:10.714cm; }
+	.ro5 { height:2.552cm; }
+	.ro6 { height:2.027cm; }
+	.ro7 { height:1.236cm; }
+	.ro8 { height:2.422cm; }
+	.ro9 { height:4.001cm; }
+	.T1 { font-family:Times New Roman; text-shadow:none; font-style:normal; text-decoration:none ! important; font-weight:normal; font-size:10pt; }
+	.T2 { font-family:Times New Roman; text-shadow:none; font-style:normal; text-decoration:none ! important; font-weight:normal; font-size:10pt; color:#0000ff; }
+	.T3 { color:#0000ff; font-family:Times New Roman; font-size:10pt; font-weight:normal; text-decoration:none ! important; font-style:normal; text-shadow:none; }
+	.T4 { color:#0000ff; font-family:Arial; font-size:10pt; font-weight:normal; text-decoration:none ! important; font-style:normal; text-shadow:none; }
+	.T5 { font-family:Times New Roman; font-size:12pt; font-style:normal; text-shadow:none; text-decoration:none ! important; font-weight:normal; }
+	<!-- ODF styles with no properties representable as CSS -->
+	 { }
+</style>
+

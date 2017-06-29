@@ -1,0 +1,34 @@
+Shrink the C: drive to only as much needed for windows.
+
+1) Disable FASTBOOT in Windows
+2) Disable FASTBOOT and Secure Boot in GRUB
+3) Install Ubuntu
+
+Install in the new unallocated space.
+
+Partitioning..
+
+Ubuntu and Data.
+
+After restart, Data is seen as /media/username/Data
+
+To mount it everytime..
+
+df -h or sudo fdisk -l
+
+identify the /dev partition : 
+
+~$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+udev            7,8G     0  7,8G   0% /dev
+tmpfs           1,6G  9,5M  1,6G   1% /run
+/dev/nvmexxxx   55G  4,6G   48G   9% /
+tmpfs           7,8G  252K  7,8G   1% /dev/shm
+tmpfs           5,0M  4,0K  5,0M   1% /run/lock
+tmpfs           7,8G     0  7,8G   0% /sys/fs/cgroup
+/dev/nvmeyyyy  356M   81M  276M  23% /boot/efi
+tmpfs           1,6G  108K  1,6G   1% /run/user/1000
+/dev/nvmezzzz  322G   75M  322G   1% /media/username/data
+
+~$ blkid /dev/nvmezzzz
+/dev/nvmezzzz: LABEL="data" UUID="59E04C3D7AA598F7" TYPE="ntfs" PARTLABEL="data" PARTUUID="18bbba85-8646-496b-8150-ded50efc42e7"

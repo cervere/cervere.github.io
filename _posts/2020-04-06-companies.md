@@ -17,6 +17,9 @@ table{
     border: 2px solid #774F38;
     border-collapse: collapse;  
 }
+tr:nth-child(even){
+    background-color:#ECE5CE;
+}
 </style>
 <table border="1" width="100%">
 

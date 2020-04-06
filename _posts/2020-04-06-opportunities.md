@@ -1,3 +1,9 @@
+---
+layout: default
+title: "List of lists - Companies / Opportunities"
+date: 2020-04-07
+---
+
 Other list that maintain the lists of start-ups / opportunities. 
 <style>
 thead {color:green;}

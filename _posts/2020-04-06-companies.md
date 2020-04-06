@@ -53,5 +53,10 @@ tr:nth-child(even){
   <td><a href="https://www.imachines.com/"> https://www.imachines.com/ </a> </td>
   <td>Machine Learning at Web Scale</td>
 </tr>
+<tr>
+  <td>Exogene</td>
+  <td><a href="https://exogene.co.uk/jobs/"> https://exogene.co.uk/jobs/ </a> </td>
+  <td>Accelerating cancer immunotherapy discovery</td>
+</tr>
 
 </table>

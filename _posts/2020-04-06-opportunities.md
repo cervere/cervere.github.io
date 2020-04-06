@@ -27,4 +27,8 @@ tr:nth-child(even){
   <td>Startups still hiring in Europe amid coronavirus</td>
   <td><a href="https://sifted.eu/articles/startups-europe-hiring-coronavirus/"> https://sifted.eu/articles/startups-europe-hiring-coronavirus/ </a> </td>
 </tr>
+<tr>
+  <td>Open source jobs</td>
+  <td><a href="https://github.com/t9tio/open-source-jobs#readme"> https://github.com/t9tio/open-source-jobs#readme </a> </td>
+</tr>
 </table>

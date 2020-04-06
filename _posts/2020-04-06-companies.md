@@ -9,8 +9,14 @@ The companies that seem interesting, likely to follow up.
 thead {color:green;}
 tbody {color:blue;}
 tfoot {color:red;}
-table,th,td
-{border:1px solid black;}
+th,td {
+  border:1px solid black;
+  padding: 5px 10px;
+}
+table{
+    border: 2px solid #774F38;
+    border-collapse: collapse;  
+}
 </style>
 <table border="1" width="100%">
 

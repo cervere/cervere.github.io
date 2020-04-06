@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Companies of interest"
-date: 2020-04-06
+date: 2020-04-07
 ---
 
 The companies that seem interesting, likely to follow up. 

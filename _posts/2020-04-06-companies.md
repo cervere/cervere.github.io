@@ -33,4 +33,10 @@ tr:nth-child(even){
   <td><a href="https://thedecisionlab.com/work-with-us"> https://thedecisionlab.com/work-with-us </a> </td>
   <td>"We are a Canadian non-profit on a unique mission to democratize behavioral science by diffusing knowledge about it and applying it for social good."</td>
 </tr>
+<tr>
+  <td>GitLab</td>
+  <td><a href="https://about.gitlab.com/jobs/"> https://about.gitlab.com/jobs/ </a> </td>
+  <td>"Well, Gitlab."</td>
+</tr>
+
 </table>

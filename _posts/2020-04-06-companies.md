@@ -38,5 +38,10 @@ tr:nth-child(even){
   <td><a href="https://about.gitlab.com/jobs/"> https://about.gitlab.com/jobs/ </a> </td>
   <td>"Well, Gitlab."</td>
 </tr>
+<tr>
+  <td>NYU - Computational psychiatry</td>
+  <td><a href="https://nyuscholars.nyu.edu/en/publications/computational-psychiatry"> https://nyuscholars.nyu.edu/en/publications/computational-psychiatry </a> </td>
+  <td>"Psychiatric disorders such as autism and schizophrenia, arise from abnormalities in brain systems that underlie cognitive, emotional, and social functions."</td>
+</tr>
 
 </table>

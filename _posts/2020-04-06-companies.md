@@ -48,5 +48,10 @@ tr:nth-child(even){
   <td><a href="https://www.attentioninthebrain.com/work-with-us"> https://www.attentioninthebrain.com/work-with-us </a> </td>
   <td>Dartmouth College</td>
 </tr>
+<tr>
+  <td>Intuition Machines</td>
+  <td><a href="https://www.imachines.com/"> https://www.imachines.com/ </a> </td>
+  <td>Machine Learning at Web Scale</td>
+</tr>
 
 </table>

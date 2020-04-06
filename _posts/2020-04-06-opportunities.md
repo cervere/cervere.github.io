@@ -35,5 +35,9 @@ tr:nth-child(even){
   <td>Remote ML jobs</td>
   <td><a href="https://remoteml.com/"> https://remoteml.com/ </a> </td>
 </tr>
+<tr>
+  <td>Angel.co jobs</td>
+  <td><a href="https://angel.co/jobs"> https://angel.co/jobs </a> </td>
+</tr>
 
 </table>

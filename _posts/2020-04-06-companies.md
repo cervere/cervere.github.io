@@ -58,5 +58,10 @@ tr:nth-child(even){
   <td><a href="https://exogene.co.uk/jobs/"> https://exogene.co.uk/jobs/ </a> </td>
   <td>Accelerating cancer immunotherapy discovery</td>
 </tr>
+<tr>
+  <td>Intel AI</td>
+  <td><a href="https://www.intel.com/content/www/us/en/artificial-intelligence/posts/brainiak-ai-powered-neuroscience.html"> https://www.intel.com/content/www/us/en/artificial-intelligence/posts/brainiak-ai-powered-neuroscience.html </a> </td>
+  <td>BrainIAK: AI-Powered Neuroscience</td>
+</tr>
 
 </table>

@@ -24,8 +24,7 @@ tr:nth-child(even){
 <table border="1" width="100%">
 
 <tr>
-  <td>Healthify</td>
-  <td><a href="https://www.healthify.us/"> https://www.healthify.us/ </a> </td>
-  <td>"We help organizations address the social determinants of health"</td>
+  <td>Startups still hiring in Europe amid coronavirus</td>
+  <td><a href="https://sifted.eu/articles/startups-europe-hiring-coronavirus/"> https://sifted.eu/articles/startups-europe-hiring-coronavirus/ </a> </td>
 </tr>
 </table>

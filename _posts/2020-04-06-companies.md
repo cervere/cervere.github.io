@@ -25,12 +25,12 @@ tr:nth-child(even){
 
 <tr>
   <td>Healthify</td>
-  <td>"We help organizations address the social determinants of health"</td>
   <td><a href="https://www.healthify.us/"> https://www.healthify.us/ </a> </td>
+  <td>"We help organizations address the social determinants of health"</td>
 </tr>
 <tr>
   <td>The Decision Lab</td>
-  <td>"We are a Canadian non-profit on a unique mission to democratize behavioral science by diffusing knowledge about it and applying it for social good."</td>
   <td><a href="https://thedecisionlab.com/work-with-us"> https://thedecisionlab.com/work-with-us </a> </td>
+  <td>"We are a Canadian non-profit on a unique mission to democratize behavioral science by diffusing knowledge about it and applying it for social good."</td>
 </tr>
 </table>

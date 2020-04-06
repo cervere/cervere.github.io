@@ -6,7 +6,7 @@ date: 2020-04-07
 
 The companies that seem interesting, likely to follow up. 
 
-<table style="width:300px">
+<table>
 <tr>
   <td>Healthify</td>
   <td>"We help organizations address the social determinants of health"</td>

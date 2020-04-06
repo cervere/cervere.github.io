@@ -43,5 +43,10 @@ tr:nth-child(even){
   <td><a href="https://nyuscholars.nyu.edu/en/publications/computational-psychiatry"> https://nyuscholars.nyu.edu/en/publications/computational-psychiatry </a> </td>
   <td>"Psychiatric disorders such as autism and schizophrenia, arise from abnormalities in brain systems that underlie cognitive, emotional, and social functions."</td>
 </tr>
+<tr>
+  <td>EPSCoR Attention Consortium</td>
+  <td><a href="https://www.attentioninthebrain.com/work-with-us"> https://www.attentioninthebrain.com/work-with-us </a> </td>
+  <td>Dartmouth College</td>
+</tr>
 
 </table>

@@ -43,6 +43,11 @@ tr:nth-child(even){
   <td>DUTCH INSTITUTE FOR EMERGENT PHENOMENA</td>
   <td><a href="https://www.d-iep.org/diep-uvaopenpositions"> https://www.d-iep.org/diep-uvaopenpositions </a> </td>
 </tr>
-
+<tr>
+  <td>Curated list on Github</td>
+  <td><a href="https://github.com/lukasz-madon/awesome-remote-job#job-boards
+"> https://github.com/lukasz-madon/awesome-remote-job#job-boards
+ </a> </td>
+</tr>
 
 </table>

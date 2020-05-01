@@ -74,9 +74,14 @@ tr:nth-child(even){
   <td>Amazon AI</td>
 </tr>
 <tr>
-  <td>100 AI Startups</td>
+  <td>50 AI Startups</td>
   <td><a href="https://www.forbes.com/sites/jilliandonfro/2019/09/17/ai-50-americas-most-promising-artificial-intelligence-companies/"> 50 AI startups in the US </a> </td>
   <td>Forbes list</td>
+</tr>
+<tr>
+  <td>AI Company</td>
+  <td><a href="https://aibrain.com/about/careers/"> AIBrain Inc. </a> </td>
+  <td>AI Company with open careers page</td>
 </tr>
 
 </table>

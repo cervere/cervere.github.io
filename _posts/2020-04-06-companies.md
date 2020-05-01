@@ -63,5 +63,20 @@ tr:nth-child(even){
   <td><a href="https://www.intel.com/content/www/us/en/artificial-intelligence/posts/brainiak-ai-powered-neuroscience.html"> https://www.intel.com/content/www/us/en/artificial-intelligence/posts/brainiak-ai-powered-neuroscience.html </a> </td>
   <td>BrainIAK: AI-Powered Neuroscience</td>
 </tr>
+<tr>
+  <td>100 AI Startups</td>
+  <td><a href="https://www.cbinsights.com/research/artificial-intelligence-top-startups/"> https://www.cbinsights.com/research/artificial-intelligence-top-startups/ </a> </td>
+  <td>CB Insights</td>
+</tr>
+<tr>
+  <td>100 AI Startups</td>
+  <td><a href="https://www.amazon.jobs/en/teams/amazonai?offset=0&result_limit=10&sort=relevant&distanceType=Mi&radius=24km&latitude=&longitude=&loc_group_id=&loc_query=&base_query=&city=&country=&region=&county=&query_options=&"> Amazon AI Jobs </a> </td>
+  <td>Amazon AI</td>
+</tr>
+<tr>
+  <td>100 AI Startups</td>
+  <td><a href="https://www.forbes.com/sites/jilliandonfro/2019/09/17/ai-50-americas-most-promising-artificial-intelligence-companies/"> 50 AI startups in the US </a> </td>
+  <td>Forbes list</td>
+</tr>
 
 </table>

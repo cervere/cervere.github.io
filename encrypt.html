@@ -1,3 +1,5 @@
+<html>
+<head>
 <script src="aes-min.js"></script>
 
 <script>
@@ -8,7 +10,8 @@ document.getElementById("demo1").innerHTML = encryptedAES;
 document.getElementById("demo2").innerHTML = decryptedBytes;
 document.getElementById("demo3").innerHTML = plaintext;
 </script>
-
+</head>
+<body>
 Full working sample actually is:
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
@@ -24,3 +27,5 @@ Full working sample actually is:
 <br>
 <label>Actual Message</label>
 <div id="demo3"></div>
+</body>
+</html>

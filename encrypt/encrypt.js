@@ -27,6 +27,16 @@ var webdevencrypt = {
             var ch = String.fromCharCode(result[i]); str += ch ;
         }
         return str ;
+    },
+    submitEncrypted : function() {
+        var category = document.getElementById('category');
+    var thought = document.getElementById('thought');
+    var encryptedOutput = document.getElementById('encryptedOutput');
+    doCORSRequest({
+        method: 'GET',
+        url: 'https://script.google.com/macros/s/AKfycbzZZz38fjoE0B80D_hQiMc14D2c_Ju1sIQlQjGFJAYPcepjVfVx/exec',
+        data: {'thought' : thought, 'category' : category, 'encryptedOutput' : encryptedOutput}
+      });
     }
 }
 
@@ -48,23 +58,3 @@ var $form = $('form#thought-form');
     x.send(options.data);
   }
 
-  // Bind event
-  (function() {
-    var urlField = document.getElementById('category');
-    var dataField = document.getElementById('thought');
-    var outputField = document.getElementById('encryptedOutput');
-    document.getElementById('submitthought').onclick = function(e) {
-      e.preventDefault();
-      doCORSRequest({
-        method: 'GET',
-        url: 'https://script.google.com/macros/s/AKfycbzZZz38fjoE0B80D_hQiMc14D2c_Ju1sIQlQjGFJAYPcepjVfVx/exec',
-        data: $form.serializeObject()
-      }, function printResult(result) {
-        outputField.value = result;
-      });
-    };
-  });
-  if (typeof console === 'object') {
-    console.log('// To test a local CORS Anywhere server, set cors_api_url. For example:');
-    console.log('cors_api_url = "http://localhost:8080/"');
-  }

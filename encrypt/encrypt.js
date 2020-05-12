@@ -16,10 +16,11 @@ var webdevencrypt = {
     },
     decryptCodes: function(content,passcode) {
         var result = [];var str = '';
+        var codeArr = JSON.parse(content);
         var passLen = passcode.length ;
-        for(var i = 0  ; i < content.length ; i++) {
+        for(var i = 0  ; i < codeArr.length ; i++) {
             var passOffset = i%passLen ;
-            var calAscii = (content[i]-passcode.charCodeAt(passOffset));
+            var calAscii = (codeArr[i]-passcode.charCodeAt(passOffset));
             result.push(calAscii) ;
         }
         for(var i = 0 ; i < result.length ; i++) {

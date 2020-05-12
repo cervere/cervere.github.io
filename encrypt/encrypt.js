@@ -31,6 +31,7 @@ var webdevencrypt = {
 }
 
 var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
+var sheets_url = 'https://script.google.com/macros/s/AKfycbzZZz38fjoE0B80D_hQiMc14D2c_Ju1sIQlQjGFJAYPcepjVfVx/exec'
   function doCORSRequest(options, printResult) {
     var x = new XMLHttpRequest();
     x.open(options.method, cors_api_url + options.url);
@@ -49,18 +50,16 @@ var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
 
   // Bind event
   (function() {
-    var urlField = document.getElementById('url');
-    var dataField = document.getElementById('data');
-    var outputField = document.getElementById('output');
-    document.getElementById('get').onclick =
-    document.getElementById('post').onclick = function(e) {
+    var category = document.getElementById('category');
+    var thought = document.getElementById('thought');
+    var encryptedContent = document.getElementById('enryptedContent');
+    document.getElementById('submitthought').onclick = function(e) {
       e.preventDefault();
       doCORSRequest({
-        method: this.id === 'post' ? 'POST' : 'GET',
-        url: urlField.value,
-        data: dataField.value
+        method: 'GET',
+        url: sheets_url+'?'+'thought='+thought+'&category='+category+'&encryptedContent='+encryptedContent,
+        data: ''
       }, function printResult(result) {
-        outputField.value = result;
       });
     };
   })();

@@ -53,11 +53,11 @@ var sheets_url = 'https://script.google.com/macros/s/AKfycbzZZz38fjoE0B80D_hQiMc
 
   // Bind event
   (function() {
+    document.getElementById('submitthought').onclick = function(e) {      
     var category = document.getElementById('category').value;
     var thought = document.getElementById('thought').value;
     var passcode = document.getElementById('passcode').value;
     var encryptedContent = webdevencrypt.encryptCodes(thought,passcode);
-    document.getElementById('submitthought').onclick = function(e) {      
       e.preventDefault();
       doCORSRequest({
         method: 'GET',

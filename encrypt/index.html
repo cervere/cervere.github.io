@@ -7,7 +7,6 @@
     <script src="encrypt.js"></script>
 </head>
 <body>
-    <form id="thought-form">
     <div class="center top-relative">
         <div class="content voilet2">
             <span>Category</span>
@@ -31,9 +30,8 @@
         </div>
         <button class="encrypt" onclick="webdevencrypt.setEncrypt('thought','encryptedContent','passcode')">Encrypt</button>
         <button class="encrypt" onclick="webdevencrypt.setDecrypt('encryptedContent','decryptedContent','passcode')">Decrypt</button>
-        <button class="encrypt" onclick="webdevencrypt.submitEncrypted()" type="submit" id="submitthought">Submit</button>
+        <button class="encrypt" onclick="webdevencrypt.submitEncrypted()" id="submitthought">Submit</button>
     </div>
-        </form>
 </body>
  
 </html>

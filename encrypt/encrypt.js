@@ -2,8 +2,8 @@ var webdevencrypt = {
     setEncrypt: function(source,destination,passcode) {
         document.getElementById(destination).innerText = this.encryptCodes(document.getElementById(source).value,document.getElementById(passcode).value);
     },
-    setDecrypt: function() {
-                document.getElementById('decryptedContent').innerText = this.decryptCodes(document.getElementById('thought').value,document.getElementById('passcode').value);
+    setDecrypt: function(source,destination,passcode) {
+                document.getElementById(destination).innerText = this.decryptCodes(document.getElementById(source).value,document.getElementById(passcode).value);
     },
     encryptCodes: function(content,passcode) {
         var result = []; var passLen = passcode.length ;

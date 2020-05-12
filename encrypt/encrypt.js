@@ -30,7 +30,7 @@ var webdevencrypt = {
     }
 }
 
-
+var $form = $('form#thought-form');
   var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
   function doCORSRequest(options, printResult) {
     var x = new XMLHttpRequest();
@@ -53,7 +53,7 @@ var webdevencrypt = {
     var urlField = document.getElementById('category');
     var dataField = document.getElementById('thought');
     var outputField = document.getElementById('encryptedOutput');
-    document.getElementById('submit-thought').onclick = function(e) {
+    document.getElementById('submitthought').onclick = function(e) {
       e.preventDefault();
       doCORSRequest({
         method: 'GET',

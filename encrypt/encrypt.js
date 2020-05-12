@@ -16,8 +16,8 @@ var webdevencrypt = {
     },
     decryptCodes: function(content,passcode) {
         var result = [];var str = '';
-        var codesArr = JSON.parse(content);var passLen = passcode.length ;
-        for(var i = 0  ; i < codesArr.length ; i++) {
+        var passLen = passcode.length ;
+        for(var i = 0  ; i < content.length ; i++) {
             var passOffset = i%passLen ;
             var calAscii = (codesArr[i]-passcode.charCodeAt(passOffset));
             result.push(calAscii) ;

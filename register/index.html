@@ -3,53 +3,65 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" rel="stylesheet">
+    <link href="fancy.css" rel="stylesheet">
     <script src="jquery.min.js"></script>
     <script src="encrypt.js"></script>
 </head>
 <body>
+	<div class="section over-hide z-bigger">
+  <input class="checkbox" type="checkbox" name="general" id="general">
+  <label class="for-checkbox" for="general"></label>
+  <div class="background-color"></div>
+  <div class="section over-hide z-bigger">
+    <div class="container pb-5">
+      <div class="row justify-content-center pb-5">
     <div class="center top-relative">
-        <div class="content voilet2">
-            <span>Category</span>
-            <div class="content voilet2">
-            </div>
-            <form id="categoryform"> 
-              <label><input type="radio" name="category" id="grocery" value="Grocery" checked="true">Groceries</label>
-              <label><input type="radio" name="category" id="phonecall" value="Call" >Call</label>
-              <label><input type="radio" name="category" id="email" value="Email" >Email</label>
-              <label><input type="radio" name="category" id="reminder" value="Reminder" >Reminder</label>
-              <label><input type="radio" name="category" id="foodforthought" value="Food for thought" >Food for thought</label>
-              <label><input type="radio" name="category" id="other" value="Other" >Other</label>
-              <div class="content voilet2">
-              </div>
-               <div id="newcategorydiv"> 
-                <label>New Category </label>
-                <textarea id="newcategory"></textarea>
-               </div>
-               <div class="content voilet2">
-              </div>
-               <div id="subcategorydiv"> 
-               <label>Sub-Category (sub1/sub2)</label>
-               <textarea id="subcategory"></textarea>
-              </div>
-            </form>
-        </div>
-
-        <div class="content voilet2">
-          <form id="thoughtoraction"> 
-            <label><input type="radio" name="thoughtoraction" id="thought" value="Thought" checked="true">Thought</label>
-            <label><input type="radio" name="thoughtoraction" id="action" value="Action" >Action</label>
-            <textarea id="content"></textarea>
-          </form>
-        </div>
-        <div class="content voilet2">
-          <button class="submit" id="submitthought">Submit</button>
-        </div>
-        <button class="encrypt" id="submitencryptedthought">Submit Encrypted</button>
-        <div class="content voilet2">
-          <span>Enter Password for Encryption</span>
-            <input class="f15pt" type="password" id="passcode" placeholder="password" />
+    <div class="content voilet2">
+        <span>Category</span>
+        <form id="categoryform" style="display:block"> 
+          <input type="radio" name="category" id="grocery" value="Grocery" checked="true">
+          <label for="grocery">Groceries</label>
+          <input type="radio" name="category" id="phonecall" value="Call" >
+          <label for="phonecall">Call</label>
+          <input type="radio" name="category" id="email" value="Email" >
+          <label for="email">Email</label>
+          <input type="radio" name="category" id="reminder" value="Reminder" >
+          <label for="reminder">Reminder</label>
+          <input type="radio" name="category" id="foodforthought" value="Food for thought" >
+          <label for="foodforthought">Food for thought</label>
+          <input type="radio" name="category" id="other" value="Other" >
+          <label for="other">Other</label>
+           <div id="newcategorydiv"> 
+            <span>New Category </span>
+            <textarea id="newcategory"></textarea>
+           </div>
+           <div id="subcategorydiv"> 
+           <span>Sub-Category (sub1/sub2)</span>
+           <textarea id="subcategory"></textarea>
           </div>
+        </form>
     </div>
+      <div class="content voilet2">
+        <form id="thoughtoraction"> 
+          <label><input type="radio" name="thoughtoraction" id="thought" value="Thought" checked="true">Thought</label>
+          <label><input type="radio" name="thoughtoraction" id="action" value="Action" >Action</label>
+          <textarea id="content"></textarea>
+        </form>
+      </div>
+      <div class="content voilet2">
+        <button class="submit" id="submitthought">Submit</button>
+        <button class="encrypt" id="submitencryptedthought">Submit Encrypted</button>
+        <span>Enter Password for Encryption</span>
+          <input class="f15pt" type="password" id="passcode" placeholder="password" />
+      </div>
+      <div class="content voilet2">
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  </div>
     <script>
         var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
         function doCORSRequest(options, printResult) {

@@ -10,63 +10,84 @@
     <div class="center top-relative">
         <div class="content voilet2">
             <span>Category</span>
-            <textarea id="category"></textarea>
+            <div class="content voilet2">
+            </div>
+            <form id="categoryform"> 
+              <label><input type="radio" name="category" id="grocery" value="Grocery" checked="true">Groceries</label>
+              <label><input type="radio" name="category" id="phonecall" value="Call" >Call</label>
+              <label><input type="radio" name="category" id="email" value="Email" >Email</label>
+              <label><input type="radio" name="category" id="reminder" value="Reminder" >Reminder</label>
+              <label><input type="radio" name="category" id="foodforthought" value="Food for thought" >Food for thought</label>
+              <label><input type="radio" name="category" id="other" value="Other" >Other</label>
+              <div class="content voilet2">
+              </div>
+               <div id="newcategorydiv"> 
+                <label>New Category </label>
+                <textarea id="newcategory"></textarea>
+               </div>
+               <div class="content voilet2">
+              </div>
+               <div id="subcategorydiv"> 
+               <label>Sub-Category (sub1/sub2)</label>
+               <textarea id="subcategory"></textarea>
+              </div>
+            </form>
+        </div>
+
+        <div class="content voilet2">
+          <form id="thoughtoraction"> 
+            <label><input type="radio" name="thoughtoraction" id="thought" value="Thought" checked="true">Thought</label>
+            <label><input type="radio" name="thoughtoraction" id="action" value="Action" >Action</label>
+            <textarea id="content"></textarea>
+          </form>
         </div>
         <div class="content voilet2">
-            <span>Thought</span>
-            <textarea id="thought"></textarea>
+          <button class="submit" id="submitthought">Submit</button>
         </div>
-</div>
-    <button class="encrypt" id="submitthought">Submit</button>
-    <div class="center top-relative">
-    <div class="content voilet1">
-            <span>Enter Password for Encryption</span>
+        <button class="encrypt" id="submitencryptedthought">Submit Encrypted</button>
+        <div class="content voilet2">
+          <span>Enter Password for Encryption</span>
             <input class="f15pt" type="password" id="passcode" placeholder="password" />
-        </div>
+          </div>
     </div>
-    </div>
-    <button class="encrypt" id="submitencryptedthought">Submit Encrypted</button>
     <script>
         var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
-var sheets_url = 'https://script.google.com/macros/s/AKfycbzZZz38fjoE0B80D_hQiMc14D2c_Ju1sIQlQjGFJAYPcepjVfVx/exec'
-  function doCORSRequest(options, printResult) {
-    var x = new XMLHttpRequest();
-    x.open(options.method, cors_api_url + options.url);
-    x.onload = x.onerror = function() {
-      printResult(
-        options.method + ' ' + options.url + '\n' +
-        x.status + ' ' + x.statusText + '\n\n' +
-        (x.responseText || '')
-      );
-    };
-    if (/^POST/i.test(options.method)) {
-      x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    }
-    x.send(options.data);
-  }
+        function doCORSRequest(options, printResult) {
+          var x = new XMLHttpRequest();
+          x.open(options.method, cors_api_url + options.url);
+          x.onload = x.onerror = function() {
+            printResult(
+              options.method + ' ' + options.url + '\n' +
+              x.status + ' ' + x.statusText + '\n\n' +
+              (x.responseText || '')
+            );
+          };
+          if (/^POST/i.test(options.method)) {
+            x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+          }
+          x.send(options.data);
+        }
 
-  // Bind event
-  (function() {
-    document.getElementById('submitthought').onclick = function(e) {      
-    var category = document.getElementById('category').value;
-    var thought = document.getElementById('thought').value;
-    var passcode = document.getElementById('passcode').value;
-    var encryptedContent = webdevencrypt.encryptCodes(thought,passcode);
-      e.preventDefault();
-      doCORSRequest({
-        method: 'GET',
-        url: sheets_url+'?'+'thought='+thought+'&category='+category+'&encryptedContent='+encryptedContent,
-        data: ''
-      }, function printResult(result) {
-      });
-    };
-  })();
-  if (typeof console === 'object') {
-    console.log('// To test a local CORS Anywhere server, set cors_api_url. For example:');
-    console.log('cors_api_url = "http://localhost:8080/"');
-  }
+        // Bind event
+        (function() {
+          var printResult = function(result) {
+            $('#categoryform').trigger("reset");
+            $('#thoughtoraction').trigger("reset");
+            location.reload();
+          };
+          document.getElementById('submitthought').onclick = function(e) {      
+            e.preventDefault();
+            options = webdevencrypt.getOptions(encrypt=false)
+            doCORSRequest(options, printResult);
+          };
+          document.getElementById('submitencryptedthought').onclick = function(e) {      
+            e.preventDefault();
+            options = webdevencrypt.getOptions(encrypt=true)
+            doCORSRequest(options, printResult);
+          };
 
-  </script>
+        })();
+    </script>
 </body>
  
 </html>

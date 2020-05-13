@@ -30,9 +30,18 @@ textarea {
     border-radius: 3px;
     border: 1px solid #6d0202;
     color: #ffffff;
-    padding: 7px;
+    padding: 4px;
     margin: 5px;
-    float: right;
+    float: left;
+}
+.submit {
+    font-size: 24pt;
+    background-color: red;
+    border-radius: 3px;
+    border: 1px solid #6d0202;
+    color: #ffffff;
+    padding: 4px;
+    display: block;
 }
 .encrypt:hover {
     background-color: #333;

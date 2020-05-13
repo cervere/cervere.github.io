@@ -208,11 +208,11 @@ mark{
 	position: relative;
 	display: inline-block;
 	padding: 0;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	width: 260px;
-	font-size: 52px;
-	line-height: 52px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 150px;
+	font-size: 26px;
+	line-height: 26px;
 	font-weight: 700;
 	letter-spacing: 1px;
 	margin: 0 auto;
@@ -417,7 +417,25 @@ mark{
 }
 
 
-
+.button {
+	width: 200px;
+	height: 36px;
+	border-radius: 18px;
+	background-color: #1c89ff;
+	border: solid 1px transparent;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 300;
+	cursor: pointer;
+	transition: all .1s ease-in-out;
+	&:hover {
+	  background-color: transparent;
+	  border-color: #fff;
+	  transition: all .1s ease-in-out;
+	}
+	
+  }
+  
 
 .link-to-page {
 	position: fixed;

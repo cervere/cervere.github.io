@@ -1,5 +1,25 @@
 $(document).ready(function(){ 
-    $("#newcategorydiv").hide();
+  (function() {
+    var printResult = function(result) {
+      $('#categoryform').trigger("reset");
+      $('#thoughtoractionform').trigger("reset");
+      $('#contentform').trigger("reset");
+      location.reload();
+    };
+    document.getElementById('submitthought').onclick = function(e) {      
+      e.preventDefault();
+      options = webdevencrypt.getOptions(encrypt=false)
+      doCORSRequest(options, printResult);
+    };
+    document.getElementById('submitencryptedthought').onclick = function(e) {      
+      e.preventDefault();
+      options = webdevencrypt.getOptions(encrypt=true)
+      doCORSRequest(options, printResult);
+    };
+  
+  })();  
+  $("#booking").hide();
+  $("#newcategorydiv").hide();
     $("#categoryform input" ).change(function() {
     var val = $("input[name=category]:checked", "#categoryform").val();  
   if(val != undefined) {
@@ -50,7 +70,7 @@ var webdevencrypt = {
         if(category == undefined) {
           category = 'Miscellaneous'
         }
-        var thought_or_action = $("input[name=thoughtoraction]:checked", "#thoughtoraction").val();  
+        var thought_or_action = $("input[name=thoughtoraction]:checked", "#thoughtoractionform").val();  
         var subcategory = $("#subcategory").val();
         var content = $("#content").val();
         var passcode = document.getElementById('passcode').value;
@@ -68,4 +88,24 @@ var webdevencrypt = {
         return options
     }
 }
+
+var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
+function doCORSRequest(options, printResult) {
+  var x = new XMLHttpRequest();
+  x.open(options.method, cors_api_url + options.url);
+  x.onload = x.onerror = function() {
+    printResult(
+      options.method + ' ' + options.url + '\n' +
+      x.status + ' ' + x.statusText + '\n\n' +
+      (x.responseText || '')
+    );
+  };
+  if (/^POST/i.test(options.method)) {
+    x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  }
+  x.send(options.data);
+}
+
+// Bind event
+
 

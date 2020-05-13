@@ -3,103 +3,163 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" rel="stylesheet">
-    <link href="fancy.css" rel="stylesheet">
     <script src="jquery.min.js"></script>
     <script src="encrypt.js"></script>
 </head>
 <body>
 	<div class="section over-hide z-bigger">
-  <input class="checkbox" type="checkbox" name="general" id="general">
-  <label class="for-checkbox" for="general"></label>
-  <div class="background-color"></div>
-  <div class="section over-hide z-bigger">
-    <div class="container pb-5">
-      <div class="row justify-content-center pb-5">
-    <div class="center top-relative">
-    <div class="content voilet2">
-        <span>Category</span>
-        <form id="categoryform" style="display:block"> 
-          <input type="radio" name="category" id="grocery" value="Grocery" checked="true">
-          <label for="grocery">Groceries</label>
-          <input type="radio" name="category" id="phonecall" value="Call" >
-          <label for="phonecall">Call</label>
-          <input type="radio" name="category" id="email" value="Email" >
-          <label for="email">Email</label>
-          <input type="radio" name="category" id="reminder" value="Reminder" >
-          <label for="reminder">Reminder</label>
-          <input type="radio" name="category" id="foodforthought" value="Food for thought" >
-          <label for="foodforthought">Food for thought</label>
-          <input type="radio" name="category" id="other" value="Other" >
-          <label for="other">Other</label>
-           <div id="newcategorydiv"> 
-            <span>New Category </span>
-            <textarea id="newcategory"></textarea>
-           </div>
-           <div id="subcategorydiv"> 
-           <span>Sub-Category (sub1/sub2)</span>
-           <textarea id="subcategory"></textarea>
+		<input class="checkbox" type="checkbox" name="general" id="general">
+		<label class="for-checkbox" for="general"></label>
+		<div class="background-color"></div>
+		<div class="section over-hide z-bigger">
+			<div class="container pb-5">
+				<div class="row justify-content-center pb-5">
+					<div class="col-12 pt-1">
+						<p class="mb-4 pb-2">Category</p>
+					</div>
+					<div class="col-12 pb-5">
+            <form id="categoryform" style="display:block"> 
+						<input class="checkbox-tools" type="radio" name="category" id="tool-1" value="Grocery" checked>
+						<label class="for-checkbox-tools" for="tool-1">
+							<i class='uil uil-line-alt'></i>
+							grocery
+						</label><!--
+						--><input class="checkbox-tools" type="radio" name="category" id="tool-2" value="Call" >
+						<label class="for-checkbox-tools" for="tool-2">
+							<i class='uil uil-vector-square'></i>
+							call
+						</label><!--
+						--><input class="checkbox-tools" type="radio" name="category" id="tool-3" value="Email" >
+						<label class="for-checkbox-tools" for="tool-3">
+							<i class='uil uil-ruler'></i>
+							email
+						</label><!--
+						--><input class="checkbox-tools" type="radio" name="category" id="tool-4" value="Reminder" >
+						<label class="for-checkbox-tools" for="tool-4">
+							<i class='uil uil-crop-alt'></i>
+							reminder 
+						</label><!--
+						--><input class="checkbox-tools" type="radio" name="category" id="tool-5" value="Idea" >
+						<label class="for-checkbox-tools" for="tool-5">
+							<i class='uil uil-brush-alt'></i>
+							idea
+						</label><!--
+						--><input class="checkbox-tools" type="radio" name="category" id="tool-6" value="Other" >
+						<label class="for-checkbox-tools" for="tool-6">
+							<i class='uil uil-image-resize-landscape'></i>
+							other
+            </label>
+            <div id="newcategorydiv"> 
+              <div class="col-12 pt-1">
+                <p class="mb-4 pb-2">New Category</p>
+              </div>
+              <textarea id="newcategory" class="ta2em"></textarea>
+             </div>
+              <div class="col-12 pt-1">
+                <p class="mb-4 pb-2">Sub-Category (sub1/sub2)</p>
+              </div>
+              <div id="col-12 pb-5"> 
+                <textarea id="subcategory" class="ta2em"></textarea>
+            </div>
+          </form>
           </div>
-        </form>
-    </div>
-      <div class="content voilet2">
-        <form id="thoughtoraction"> 
-          <label><input type="radio" name="thoughtoraction" id="thought" value="Thought" checked="true">Thought</label>
-          <label><input type="radio" name="thoughtoraction" id="action" value="Action" >Action</label>
-          <textarea id="content"></textarea>
-        </form>
-      </div>
-      <div class="content voilet2">
-        <button class="submit" id="submitthought">Submit</button>
-        <button class="encrypt" id="submitencryptedthought">Submit Encrypted</button>
-        <span>Enter Password for Encryption</span>
-          <input class="f15pt" type="password" id="passcode" placeholder="password" />
-      </div>
-      <div class="content voilet2">
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
+          
+					<div class="col-12 pt-1">
+            <p class="mb-4 pb-2"></p>
+          </div>
 
-  </div>
-    <script>
-        var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
-        function doCORSRequest(options, printResult) {
-          var x = new XMLHttpRequest();
-          x.open(options.method, cors_api_url + options.url);
-          x.onload = x.onerror = function() {
-            printResult(
-              options.method + ' ' + options.url + '\n' +
-              x.status + ' ' + x.statusText + '\n\n' +
-              (x.responseText || '')
-            );
-          };
-          if (/^POST/i.test(options.method)) {
-            x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-          }
-          x.send(options.data);
-        }
+          <div class="col-xl-10 pb-5">
+            <form id="thoughtoractionform"> 
+              <input class="checkbox-budget" type="radio" name="thoughtoraction" id="budget-1" value="Thought" checked>
+              <label class="for-checkbox-budget" for="budget-1">
+                <span data-hover="Thought">Thought</span>
+              </label><!--
+              --><input class="checkbox-budget" type="radio" name="thoughtoraction" id="budget-2" value="Action">
+              <label class="for-checkbox-budget" for="budget-2">							
+                <span data-hover="Action">Action</span>
+              </label>
+            </form>
+            <form id="contentform"> 
+              <textarea id="content" class="ta5em"></textarea>
+            </form>
+            <button class="button" id="submitthought">Submit</button>
+					</div>
+          <div class="col-12 pt-1">
+						<p class="mb-4 pb-2">OR</p>
+					</div>
+          
+          <div class="col-12 pt-1">
+						<p class="mb-4 pb-2">Set a password and Submit Encrypted</p>
+					</div>
+					<div class="col-12 pb-5">
+            <textarea class="ta2em" id="passcode" placeholder="password"></textarea>
+            <!--input class="checkbox-booking" type="password" id="passcode" placeholder="password" /-->
+            <button class="button" id="submitencryptedthought">Submit Encrypted</button>
+              </div>
+          <div id="booking">
+            <div class="col-12 pt-1">
+              <p class="mb-4 pb-2">Booking Options</p>
+            </div>
+            <div class="col-12 pb-5">
+              <input class="checkbox-booking" type="checkbox" name="booking" id="booking-1">
+              <label class="for-checkbox-booking" for="booking-1">
+                <i class='uil uil-coffee mr-3'></i><span class="text">breakfast</span>
+              </label><!--
+              --><input class="checkbox-booking" type="checkbox" name="booking" id="booking-2">
+              <label class="for-checkbox-booking" for="booking-2">							
+                <i class='uil uil-restaurant mr-3'></i><span class="text">dinner</span>
+              </label><!--
+              --><input class="checkbox-booking" type="checkbox" name="booking" id="booking-3">
+              <label class="for-checkbox-booking" for="booking-3">							
+                <i class='uil uil-car-sideview mr-3'></i><span class="text">pick up</span>
+              </label><!--
+              --><input class="checkbox-booking" type="checkbox" name="booking" id="booking-4">
+              <label class="for-checkbox-booking" for="booking-4">							
+                <i class='uil uil-flower mr-3'></i><span class="text">garden</span>
+              </label><!--
+              --><input class="checkbox-booking" type="checkbox" name="booking" id="booking-5">
+              <label class="for-checkbox-booking" for="booking-5">							
+                <i class='uil uil-wifi mr-3'></i><span class="text">internet</span>
+              </label><!--
+              --><input class="checkbox-booking" type="checkbox" name="booking" id="booking-6">
+              <label class="for-checkbox-booking" for="booking-6">							
+                <i class='uil uil-parking-square mr-3'></i><span class="text">parking</span>
+              </label><!--
+              --><input class="checkbox-booking" type="checkbox" name="booking" id="booking-7">
+              <label class="for-checkbox-booking" for="booking-7">							
+                <i class='uil uil-tv-retro mr-3'></i><span class="text">television</span>
+              </label><!--
+              --><input class="checkbox-booking" type="checkbox" name="booking" id="booking-8">
+              <label class="for-checkbox-booking" for="booking-8">							
+                <i class='uil uil-books mr-3'></i><span class="text">books</span>
+              </label><!--
+              --><input class="checkbox-booking" type="checkbox" name="booking" id="booking-9">
+              <label class="for-checkbox-booking" for="booking-9">							
+                <i class='uil uil-kayak mr-3'></i><span class="text">kayak</span>
+              </label><!--
+              --><input class="checkbox-booking" type="checkbox" name="booking" id="booking-10">
+              <label class="for-checkbox-booking" for="booking-10">							
+                <i class='uil uil-glass-martini-alt mr-3'></i><span class="text">drink</span>
+              </label><!--
+              --><input class="checkbox-booking" type="checkbox" name="booking" id="booking-11">
+              <label class="for-checkbox-booking" for="booking-11">							
+                <i class='uil uil-dumbbell mr-3'></i><span class="text">gym</span>
+              </label><!--
+              --><input class="checkbox-booking" type="checkbox" name="booking" id="booking-12">
+              <label class="for-checkbox-booking" for="booking-12">							
+                <i class='uil uil-sign-alt mr-3'></i><span class="text">walking tours</span>
+              </label>
+            </div>
+            </div>
+				</div>
+			</div>	
+		</div>
+	</div>
+		
+	<!-- Link to page
+	================================================== -->
 
-        // Bind event
-        (function() {
-          var printResult = function(result) {
-            $('#categoryform').trigger("reset");
-            $('#thoughtoraction').trigger("reset");
-            location.reload();
-          };
-          document.getElementById('submitthought').onclick = function(e) {      
-            e.preventDefault();
-            options = webdevencrypt.getOptions(encrypt=false)
-            doCORSRequest(options, printResult);
-          };
-          document.getElementById('submitencryptedthought').onclick = function(e) {      
-            e.preventDefault();
-            options = webdevencrypt.getOptions(encrypt=true)
-            doCORSRequest(options, printResult);
-          };
-
-        })();
-    </script>
+	<!--a href="https://front.codes" class="link-to-page" target="_blank"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/logo-new.png" alt=""></a-->
 </body>
  
 </html>
